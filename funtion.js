@@ -22,6 +22,10 @@ const sumAnonima = function(number1, number2){
 
 const sumArrowFuntion = (number1,number2) => number1 + number2
 
+const sumArrowFuntion2 = (number1,number2) => {
+    number1 + number2
+}
+
 const sumTeste = (number1,number2) =>{
     return number1 + number2
 }

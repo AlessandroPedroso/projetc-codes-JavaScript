@@ -31,3 +31,12 @@ people.forEach(item =>{
 for(let item = 0; item < people.length; item++){
     console.log(people[item])
 }
+
+const exibeNoConsole = (lista)=>{
+    lista.map((item,indice) => console.log(item + ` [${indice}]`));
+}
+
+let listaDeNomes1 = ['Flávio', 'Rogers', 'Júlia'];
+let listaDeNomes2 = ['Vieira', 'Fernanda', 'Gerson'];
+
+exibeNoConsole([].concat(listaDeNomes1, listaDeNomes2, 'Rômulo'));

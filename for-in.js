@@ -16,12 +16,12 @@ const student2 = {
 // console.log(student.name)
 // console.log("----------------------------------------")
 
-for (let property in student2) {
-    console.log(`${property}: ${student2[property]}`)
-}
-
-// console.log(`----------------------------`)
 // for (let property in student) {
-//     // console.log(`${property}: ${student[property]}`)
-//     console.log(student[property])
+//     console.log(`${property}`)
 // }
+
+console.log(`----------------------------`)
+for (let property in student) {
+    // console.log(`${property}: ${student[property]}`)
+    console.log(student[property])
+}

@@ -51,3 +51,14 @@ console.log(`E a soma dos dois é ${sumAnonima(firstNumber,seccondNumber)}`)
 console.log(`E a soma dos dois é ${functionArrow}`)
 console.log(`E a soma dos dois é ${sumTesteResult}`)
 
+const object = {
+    "nome": 'Alessandro',
+    "quantidade": 10
+}
+
+const criaElemento = (elemento) =>{
+    console.log("nome: " + elemento.nome)
+    console.log("quantidade: " + elemento.quantidade)
+}
+
+criaElemento(object)

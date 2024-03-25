@@ -12,10 +12,10 @@ const student = [{
 }]
 
 
-// for (let name of student) {
-//     console.log(`Nome do Aluno: ${name.name}`)
-// }
-
-for (const names of allNames) {
-    console.log(names)
+for (let name of student) {
+    console.log(`Nome do Aluno: ${name.name}`)
 }
+
+// for (const names of allNames) {
+//     console.log(names)
+// }

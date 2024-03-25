@@ -33,7 +33,7 @@ for(let item = 0; item < people.length; item++){
 }
 
 const exibeNoConsole = (lista)=>{
-    lista.map((item,indice) => console.log(item + ` [${indice}]`));
+    lista.map((item,indice) => console.log(` [${indice}] ` + item ));
 }
 
 let listaDeNomes1 = ['Flávio', 'Rogers', 'Júlia'];

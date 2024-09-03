@@ -1,54 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
-    <input placeholder="Digite o nome do contato" type="text">
+  <body>
+    <input placeholder="Digite o nome do contato" type="text" />
     <p></p>
-    <button onclick="searchForOf()">Procurar Contato</button>
-
-</body>
-<script>
-    let p = document.querySelector('p')
-    let input = document.querySelector('input')
+    <button onclick="searchDoWhile()">Procurar Contato</button>
+  </body>
+  <script>
+    
+    let p = document.querySelector("p");
+    let input = document.querySelector("input");
 
     const contacts = [
-        { name: 'Alessandro', number: '(51) 998152732' },
-        { name: 'Eduardo', number: '(51) 998152732' },
-        { name: 'Taís', number: '(51) 998152732' },
-        { name: 'Lúcia', number: '(51) 998152732' },
-        { name: 'Mario', number: '(51) 998152732' },
-    ]
+      { name: "Alessandro", number: "(51) 998152732" },
+      { name: "Eduardo", number: "(51) 998152732" },
+      { name: "Taís", number: "(51) 998152732" },
+      { name: "Lúcia", number: "(51) 998152732" },
+      { name: "Mario", number: "(51) 998152732" },
+    ];
 
     function search() {
-        for (let i = 0; i < contacts.length; i++) {
-            if (contacts[i].name.toLowerCase().includes(input.value.toLowerCase())) {
-
-                break
-            } else {
-                p.innerHTML = "Contato não encontrado, tente novamente"
-            }
+      for (let i = 0; i < contacts.length; i++) {
+        if (
+          contacts[i].name.toLowerCase().includes(input.value.toLowerCase())
+        ) {
+          break;
+        } else {
+          p.innerHTML = "Contato não encontrado, tente novamente";
         }
+      }
     }
 
     function searchForOf() {
-        for (const element of contacts) {
-
-            if (input.value.toLowerCase() === element.name.toLowerCase()) {
-                p.innerHTML = `Contato Encontrado Nome: ${element.name} Tel: ${element.number}`
-                break;
-
-            } else {
-                p.innerHTML = "Contato não encontrado, tente novamente"
-            }
+      for (const element of contacts) {
+        if (input.value.toLowerCase() === element.name.toLowerCase()) {
+          p.innerHTML = `Contato Encontrado Nome: ${element.name} Tel: ${element.number}`;
+          break;
+        } else {
+          p.innerHTML = "Contato não encontrado, tente novamente";
         }
+      }
     }
-</script>
 
+    function searchWhile() {
+      let index = 0;
+
+      while (index < contacts.length) {
+        const searchContacts = contacts[index];
+
+        if (input.value.toLowerCase() === searchContacts.name.toLowerCase()) {
+          p.innerHTML = `Contato Encontrado Nome: ${searchContacts.name} Tel: ${searchContacts.number}`;
+          break;
+        } else {
+          p.innerHTML = "Contato não encontrado, tente novamente";
+        }
+        index++; // precisa colocar o index no final pois precisa reconhecer o 0
+      }
+    }
+
+    function searchDoWhile() {
+      let i = 0;
+
+      do {
+        const searchContacts = contacts[i];
+
+        if (input.value.toLowerCase() === searchContacts.name.toLowerCase()) {
+          p.innerHTML = `Contato Encontrado Nome: ${searchContacts.name} Tel: ${searchContacts.number}`;
+          break;
+        } else {
+          p.innerHTML = "Contato não encontrado, tente novamente";
+        }
+        i++;
+      } while (i < contacts.length);
+    }
+    
+  </script>
 </html>

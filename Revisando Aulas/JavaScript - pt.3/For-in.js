@@ -5,8 +5,6 @@
 
 const users = { name: 'Alessandro', age: 33, street: 'Rua dos Bobos' }
 
-
-
 for (const key in users) {
     console.log(users[key])
 }

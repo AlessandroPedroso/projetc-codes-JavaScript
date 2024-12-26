@@ -13,12 +13,47 @@ const list = [
 ]
 
 const newList = list.map(user => {
-    const newUser = {
+    return {
         name: user.name,
         braceletColor: user.vip ? 'black' : 'green'
     }
 
-    return newUser
 })
 
 console.log(newList)
+
+const students = [
+    { name: 'Rodolfo', testGrade: 7 },
+    { name: 'Alessandro', testGrade: 5 },
+    { name: 'João', testGrade: 8 },
+    { name: 'Bruno', testGrade: 9 },
+    { name: 'Carla', testGrade: 3 },
+    { name: 'Ana', testGrade: 2 },
+    { name: 'Julio', testGrade: 10 },
+]
+
+const newStudents = students.map((students) => {
+    let status = ''
+
+    if (students.testGrade < 5) {
+        status = 'Reprovado'
+    } else {
+        status = 'Aprovado'
+    }
+
+    return {
+        name: students.name,
+        statusAprovacao:status
+    }
+})
+
+console.log(newStudents)
+
+const newStudentsTernario = students.map((students) => {
+    return {
+        name: students.name,
+        statusAprovacao: students.testGrade < 5 ? "Reprovado":"Aprovado"
+    }
+})
+
+console.log(newStudentsTernario)

@@ -4,7 +4,7 @@
 */
 
 const myName = 'Rodolfo'
-const users = ['João','Maria', 'Letícia']
+const users = ['João', 'Maria', 'Letícia']
 
 for (const element of users) {
     console.log(element)

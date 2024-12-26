@@ -8,3 +8,5 @@ Variáveis
 let salaDoAluno = 50
 const notaDoAluno = 10
 console.log(salaDoAluno)
+
+
